@@ -134,8 +134,6 @@ Node* Bst::InorderSuccessor(Node *p)
 
 Node* Bst::DeleteNode(Node* p, int key)
 {
-    Node *q;
-
     // Delete Node
     if(p == NULL)
         return NULL;
@@ -160,6 +158,7 @@ Node* Bst::DeleteNode(Node* p, int key)
         // Based on Height of Subtree, we decide whether we want to delete from Left side or Right side
 
         //Left side is Have greater Height
+        Node *q;
         if(Height(p->lchild) > Height(p->rchild))
         {
             q = InorderPredecessor(p->lchild);
