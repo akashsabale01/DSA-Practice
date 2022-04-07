@@ -12,7 +12,7 @@
 
 At this point, elements are already sorted. Finally, elements are combined to form a sorted array.
 
-    T.C = O(n^2) , best T.C=PO(nlogn),
+    T.C = O(n^2) , best T.C=(nlogn),
     S.C = O(logn)
 
 
