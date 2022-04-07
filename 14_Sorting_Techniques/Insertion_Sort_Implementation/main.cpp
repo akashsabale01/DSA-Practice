@@ -2,7 +2,12 @@
 
 -> InsertionSort Algorithm
 
+    Insertion sort is a sorting algorithm that places an unsorted element at its suitable place in each iteration.
+    The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+
     T.C = O(n^2), S.C = O(1)
+
+    No of Swaps = O(n^2)
 
     InsertionSort is Stable i.e. preserves order when duplicates items occurs.
 

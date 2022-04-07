@@ -2,7 +2,11 @@
 
 -> BubbleSort Algorithm
 
+    Bubble sort is a sorting algorithm that compares two adjacent elements and swaps them until they are not in the intended order.
+
     T.C = O(n^2), S.C = O(1)
+
+    No of Swaps = O(n^2)
 
     BubbleSort is Stable i.e. preserves order when duplicates items occurs
 
