@@ -12,9 +12,8 @@
 
 At this point, elements are already sorted. Finally, elements are combined to form a sorted array.
 
-    T.C = O(n^2) , best T.C=(nlogn),
+    T.C = O(n^2) , Best T.C and Avg = O(nlogn),
     S.C = O(logn)
-
 
     Quick sort is Unstable i.e. does not preserves order when duplicates items occurs.
 
