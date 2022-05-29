@@ -197,16 +197,13 @@ void PermutationsOfStringBySwapping(char s[], int l, int h)
 }
 
 
-
-
-
 int main()
 {
-//    char arr[]= "aabbbcccc";
+    char arr[]= "aabbbcccc";
 
-//    FindDuplicatesWotUsingHashing(arr);
+    FindDuplicatesWotUsingHashing(arr);
 
-//    FindDuplicatesUsingHashing(arr);
+    FindDuplicatesUsingHashing(arr);
 
 //    FindDuplicatesUsingBitWiseOperator(arr);
 
@@ -226,9 +223,9 @@ int main()
 
 //    isAnagramByHashing(arr1,arr2);
 //    isAnagramByBitwiseOperators(arr1,arr2);
-
-    char s[] = "ABC";
-    PermutationsOfString(s,0);
+//
+//    char s[] = "ABC";
+//    PermutationsOfString(s,0);
 //    PermutationsOfStringBySwapping(s,0,2);
 
     return 0;
