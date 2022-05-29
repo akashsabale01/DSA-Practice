@@ -15,6 +15,13 @@ At this point, elements are already sorted. Finally, elements are combined to fo
     T.C = O(n^2) , Best T.C and Avg = O(nlogn),
     S.C = O(logn)
 
+    No of Swaps = O(n)
+
+    Also called as Selection Exchange Sort because In Selection sort we select position then finding correct element for that position,
+    but In Quick Sort we select element then finding correct position for that element
+
+    Also called as Partition Exchange Sort becauses uses paritition
+
     Quick sort is Unstable i.e. does not preserves order when duplicates items occurs.
 
     Quick sort is Not Adaptive i.e. if given array is already sorted then it does NOT takes less time
@@ -42,7 +49,9 @@ void Swap(int *x, int *y)
     *y = temp;
 }
 
-// Partition for Quick Sort using INT_MAX or INFINITY
+/**** Approach 1 *****/
+
+// Partition for Quick Sort, Where FIRST Element is Pivot + using INT_MAX or INFINITY
 int Partition(int arr[], int low, int high)
 {
     int pivot = arr[low];
@@ -66,7 +75,7 @@ int Partition(int arr[], int low, int high)
     return j;
 }
 
-// Quick Sort using INT_MAX or INFINITY
+// Quick Sort, Where FIRST Element is Pivot + using INT_MAX or INFINITY
 void QuickSort(int arr[], int low, int high)
 {
     int p; // p is partition position after partition of array
@@ -79,20 +88,22 @@ void QuickSort(int arr[], int low, int high)
 }
 
 
-// Partition for QuickSort, Where first Element is Pivot + without using INT_MAX or INFINITY
+/**** Approach 2 *****/
+
+// Partition for QuickSort, Where FIRST Element is Pivot + without using INT_MAX or INFINITY
 int PartitionWOTIntMax(int arr[], int low, int high){
     int pivot = arr[low];
-    int i = low + 1, j = high;
+    int i = low+1, j = high;
 
-    while(true)
+    while(i<=j)
     {
-        while(i <= j && arr[i] <= pivot) { i++; }
+        // Increment i as long as elements are smaller/equal to pivot
+        while(arr[i] <= pivot) { i++; }
 
-        while(arr[j] >= pivot && j >= i) { j--; }
+        // Decrement j as long as elements are larger than pivot
+        while(arr[j] > pivot) { j--; }
 
-        if(j<i)
-            break;
-        else
+        if(i<=j)
             Swap(&arr[i], &arr[j]);
     }
 
@@ -106,13 +117,16 @@ void QuickSortWOTIntMax(int A[], int low, int high)
 {
     if (low < high)
     {
-        int p = Partition(A, low, high);
-        QuickSort(A, low, p-1);
-        QuickSort(A, p+1, high);
+        int p = PartitionWOTIntMax(A, low, high);
+        QuickSortWOTIntMax(A, low, p-1);
+        QuickSortWOTIntMax(A, p+1, high);
     }
 }
 
-// Partition for QuickSort, Where Last Element is Pivot + without using INT_MAX or INFINITY
+
+/**** Approach 3 *****/
+
+// Partition for QuickSort, Where LAST Element is Pivot + without using INT_MAX or INFINITY
 int PartitionLast(int A[], int low, int high)
 {
     int pivot = A[high];
@@ -158,7 +172,7 @@ int main()
     cout<<endl<< "Quick Sort, where First Element as Pivot + w/o INT_MAX or Infinity: " << endl;
     int b[] = {9,2,5,8,22,10,1,7,15,4};
     int szb = sizeof(b)/sizeof(b[0]);
-    QuickSortWOTIntMax(b,0,szb);
+    QuickSortWOTIntMax(b,0,szb-1);
     Display(b, szb);
 
     cout<<endl<< "Quick Sort, where Last Element as Pivot + w/o INT_MAX or Infinity: " << endl;
