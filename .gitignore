@@ -5,5 +5,11 @@
 /*/*/*.depend
 /*/*/*.o
 /*/*/*.exe
+/*/*/*.layout
+*.json
+*.exe
+*.o
+
+
 
 
