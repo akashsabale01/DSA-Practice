@@ -6,10 +6,7 @@
 /*/*/*.o
 /*/*/*.exe
 /*/*/*.layout
-*.json
-*.exe
-*.o
-
+/*/*/*.layout
 
 
 
