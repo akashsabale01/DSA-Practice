@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1655816976 source:c:\users\amrut\desktop\ds & algo\ds & algo\00_practice_all\math\find_all_prime_numbers_upto_n\main.cpp
+	<iostream>
+	<vector>
+

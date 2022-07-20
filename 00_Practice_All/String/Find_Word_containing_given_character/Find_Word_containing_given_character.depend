@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1655731610 source:c:\users\amrut\desktop\ds & algo\ds & algo\00_practice_all\string\find_word_containing_given_character\main.cpp
+	<iostream>
+	<vector>
+
