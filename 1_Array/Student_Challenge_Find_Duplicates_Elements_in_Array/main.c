@@ -131,6 +131,30 @@ void DuplicateElementsUnsortedByHashing(int a[], int n, int h)
 //
 //}
 
+void removeDuplicatesUsingUnorderedMap(int arr[], int n)
+{
+    unordered_map<int, int> umap;
+
+    // for (int i = 0; i < n; i++) // Add key,value pair in unordered_map
+    //     umap[arr[i]]++;
+
+    for (int i = 0; i < n; i++)
+    {
+
+        // Print element if it is not there in the hash map
+        // else increase count i.e. Frequency of that number
+        if (umap.find(arr[i]) == umap.end())
+        {
+            cout << arr[i] << " ";
+        }
+        umap[arr[i]]++; // increment frequency
+    }
+
+    // cout << endl;
+    // for (auto ele : umap)
+    //     cout << ele.first << " " << ele.second << endl;
+}
+
 
 
 int main()
@@ -148,15 +172,18 @@ int main()
 // Sorted array required
 //    DuplicateElementsCountByHashing(arr,n,h);
 
-    int arr[] = {8,3,6,4,6,5,6,8,2,7,10};
-    int n = sizeof(arr)/sizeof(arr[0]);
+    int arr2[] = {8,3,6,4,6,5,6,8,2,7,10};
+    int n = sizeof(arr2)/sizeof(arr2[0]);
     int h=10;
 
 // UnSorted or Sorted array required
-//    DuplicateElementsUnsorted(arr,n);
+//    DuplicateElementsUnsorted(arr2,n);
 
 // UnSorted or Sorted array required
-    DuplicateElementsUnsortedByHashing(arr,n,h);
+    DuplicateElementsUnsortedByHashing(arr2,n,h);
+
+// UnSorted or Sorted array required
+removeDuplicatesUsingUnorderedMap(arr2, n);
 
 
 
