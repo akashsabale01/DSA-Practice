@@ -1,0 +1,1 @@
+This C++ program will read  a word from user and then count its total occurrence in a textfile file4.txt. Make sure you have alreadycreate this text file and have some text in it.Place this file in the same directory where yourprogram source file is present.
