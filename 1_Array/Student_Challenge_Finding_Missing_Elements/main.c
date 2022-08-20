@@ -76,21 +76,21 @@ void MissingElementByHashing(int a[], int n, int l, int h)
 
 int main()
 {
-    int arr1[12] = {1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12};
-    int n = 12, length = 11;
-    SingleMissingElementFromZero(arr1, n, length);
+    // int arr1[12] = {1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12};
+    // int n = 12, length = 11;
+    // SingleMissingElementFromZero(arr1, n, length);
 
-    int arr2[] = {6, 7, 9, 10, 11, 12};
-    int n = 6;
-    SingleMissingElementNotFromZero(arr2, n);
+    // int arr2[] = {6, 7, 9, 10, 11, 12};
+    // int n = 6;
+    // SingleMissingElementNotFromZero(arr2, n);
 
     int arr3[] = {6, 7, 8, 9, 11, 12, 15, 16, 17, 18, 19};
     int n = sizeof(arr3) / sizeof(arr3[0]);
     MultipleMissingElements(arr3, n);
 
-    int arr4[] = {3, 7, 4, 9, 12, 6, 1, 11, 2, 10};
-    int n = 10, l = 1, h = 12;
-    MissingElementByHashing(arr4, n, l, h);
+    // int arr4[] = {3, 7, 4, 9, 12, 6, 1, 11, 2, 10};
+    // int n = 10, l = 1, h = 12;
+    // MissingElementByHashing(arr4, n, l, h);
 
     return 0;
 }
