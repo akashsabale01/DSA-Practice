@@ -16,67 +16,72 @@ using namespace std;
 // Approach 1- Brute Force
 // TC= O(n * sqrt(n), SC= O(n)
 
-//bool isPrime(int num)
+// bool isPrime(int num)
 //{
-//    if(num<=1)  return false;
+//     if(num<=1)  return false;
 //
-//    if(num==2 || num==3)    return true;
+//     if(num==2 || num==3)    return true;
 //
-//    if(num%2==0) return false; // 2 is only even prime number
+//     if(num%2==0) return false; // 2 is only even prime number
 //
-//    for(int i=5; i*i<=num; i++)
-//    {
-//        if(num%i==0)
-//            return false;
-//    }
-//    return true;
-//}
+//     for(int i=5; i*i<=num; i++)
+//     {
+//         if(num%i==0)
+//             return false;
+//     }
+//     return true;
+// }
 //
-//void primeUptoN(int n)
+// void primeUptoN(int n)
 //{
-//    vector<int> res;
+//     vector<int> res;
 //
-//    for(int i=2; i<=n; i++)
-//    {
-//        if(isPrime(i))
-//            res.push_back(i);
-//    }
+//     for(int i=2; i<=n; i++)
+//     {
+//         if(isPrime(i))
+//             res.push_back(i);
+//     }
 //
-//    // Print
-//    int sz = res.size();
-//    for(int i=0; i<sz; i++)
-//        cout<<res[i]<<" ";
-//}
+//     // Print
+//     int sz = res.size();
+//     for(int i=0; i<sz; i++)
+//         cout<<res[i]<<" ";
+// }
 //
 
 // Approach 2- Sieve of Eratosthenes
 // TC= O(n * log(log(n)), SC= O(n)
 void primeUptoN(int n)
 {
-    vector<bool> isPrime(n+1,1);
-    isPrime[0] = isPrime[1] = false;
+    vector<bool> primeArr(n + 1);
 
-    for(int i=2; i<n; i++)
+    primeArr[0] = primeArr[1] = false;
+    primeArr[2] = true; // only even prime
+
+    for (int i = 3; i < n + 1; i += 2) // marking odd numbers as true
+        primeArr[i] = true;
+
+    for (int i = 3; i < n; i += 2)
     {
-        if(isPrime[i]== true)
+        if (primeArr[i] == true)
         {
             // if it is prime then mark its multiple as not prime
-            for(int j=i*2; j<n; j+=i) // note- here increment j=j+i;
-                isPrime[j] = false;
+            for (int j = i * i; j < n; j += i) // note- here increment j=j+i;
+                primeArr[j] = false;
         }
     }
 
     // print
-    for(int i=2; i<n+1; i++)
+    for (int i = 2; i < n + 1; i++)
     {
-        if(isPrime[i]== true)
-            cout<< i << " ";
+        if (primeArr[i] == true)
+            cout << i << " ";
     }
 }
 
 int main()
 {
-    int n = 7;
+    int n = 20;
 
     primeUptoN(n);
 
