@@ -12,17 +12,31 @@ string removeDuplicates(string s)
 {
     unordered_map<char, int> exists;
 
-    int index = 0;
+    // Without temp string
+    // int index = 0;
+    // for (int i = 0; i < s.size(); i++)
+    // {
+    //     if (exists[s[i]] == 0) // not found
+    //     {
+    //         exists[s[i]]++;
+    //         s[index++] = s[i];
+    //     }
+    // }
+    // return s.substr(0, index);
+
+
+    // With temp string
+    string temp = "";
 
     for (int i = 0; i < s.size(); i++)
     {
         if (exists[s[i]] == 0) // not found
         {
             exists[s[i]]++;
-            s[index++] = s[i];
+            temp += s[i];
         }
     }
-    return s.substr(0, index);
+    return temp;
 }
 
 // driver code
