@@ -71,3 +71,7 @@ int main()
 
     return 0;
 }
+
+// https://www.javatpoint.com/subarray-with-given-sum
+// https://leetcode.com/problems/subarray-sum-equals-k/discuss/1759909/C%2B%2Bor-Full-explained-every-step-w-Dry-run-or-O(n2)-greater-O(n)-or-Two-approaches
+// https://leetcode.com/problems/subarray-sum-equals-k/discuss/1382612/C%2B%2B-or-Brute-Force-or-Better-or-Optimal-or-Commented-or-Time-O(N)-or-Auxiliary-Space-O(N)
